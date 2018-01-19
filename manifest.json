@@ -1,0 +1,33 @@
+{
+
+  "manifest_version": 2,
+  "name": "SharekiAddon",
+  "version": "1.0",
+ 
+  "description": "share history",
+  
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "background": {
+    "scripts": [
+      "src/history.js"
+    ]
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ], 
+  "permissions": [
+    "<all_urls>", 
+    "webNavigation",
+    "history"
+  ]
+
+}
