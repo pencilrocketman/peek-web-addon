@@ -20,12 +20,10 @@ const onVisited = async (historyItem) => {
   const res = await window.fetch(endPoint, {
     method: 'POST',
     body: JSON.stringify({ 
-      history: {
-        name: user, 
-        password: password,
-        url: historyItem.url,
-        time: time 
-      }
+      name: user,
+      password: password,
+      url: historyItem.url,
+      time: time
     }), 
     headers: {
       'Accept': 'application/json',
